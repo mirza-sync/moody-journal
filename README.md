@@ -1,34 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Moody Journal
 
-## Getting Started
+Daily journal, with AI-powered mood analyzer.
 
-First, run the development server:
+Source: [Build an AI-Powered Fullstack Next.js App, v3](https://frontendmasters.com/courses/fullstack-app-next-v3/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Instructor: Scott Moss from Frontend Masters
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Let's learn Next.js best practices from the pros. Sometimes they give a few pretty good insights based on their experience.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Dev Logs
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Haven't write the logs for a long while. Was busy with work. Losing motivation to code lately. I tried to commit once a day (or not), but honestly most of it were just stupid commits (updating readme, delete unused file, etc). I'm not feeling productive at all...
 
-## Learn More
+2. Anyways, I've done the prisma setup. Haven't heard the term "migration" after a long while. Last time I used it was when writing migration in Laravel.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Btw, look at this [db helper util](https://github.com/mirza-sync/moody-journal/blob/main/utils/db.ts), and compare it to [this one](https://fullstack-v2-instructions.vercel.app/lessons/db/helper) from v2 tutorial. The former is more compact, but I think the latter one was easier to understand. It reminds me of the singleton pattern. The graphql connecter helper also instantiated in a similar way iirc.
