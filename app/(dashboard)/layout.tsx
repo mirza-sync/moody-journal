@@ -1,6 +1,11 @@
 import { UserButton } from '@clerk/nextjs'
+import { ReactNode } from 'react'
 
-function DashboardLayout({ children }: any) {
+type DashboardLayoutProps = {
+  children: ReactNode
+}
+
+function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <div className="flex h-screen w-screen">
       <aside className="h-100 w-[200px] border-r border-black/10">Mood</aside>
