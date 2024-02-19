@@ -1,5 +1,7 @@
+import { JournalEntry } from '@prisma/client'
+
 type EntryCardProps = {
-  entry: any
+  entry: JournalEntry
 }
 
 const EntryCard = ({ entry }: EntryCardProps) => {
