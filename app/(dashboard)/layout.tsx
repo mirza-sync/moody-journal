@@ -15,7 +15,7 @@ function DashboardLayout({ children }: DashboardLayoutProps) {
             <UserButton />
           </div>
         </header>
-        <main>{children}</main>
+        <main className="h-full bg-zinc-400/10 p-8">{children}</main>
       </div>
     </div>
   )
