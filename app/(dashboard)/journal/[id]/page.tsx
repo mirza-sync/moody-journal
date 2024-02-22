@@ -19,7 +19,7 @@ const getEntry = async (id: string) => {
 const EntryPage = async ({ params }: any) => {
   const entry = await getEntry(params.id)
   return (
-    <div>
+    <div className="h-full w-full">
       {entry ? <Editor entry={entry} /> : <span>Entry not found!</span>}
     </div>
   )
