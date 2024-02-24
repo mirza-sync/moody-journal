@@ -1,5 +1,6 @@
 import EntryCard from '@/app/components/EntryCard'
 import NewEntryCard from '@/app/components/NewEntryCard'
+import { analyze } from '@/utils/ai'
 import { getUserByClerkID } from '@/utils/auth'
 import { prisma } from '@/utils/db'
 import Link from 'next/link'
@@ -14,6 +15,8 @@ const getEntries = async () => {
       createdAt: 'desc',
     },
   })
+
+  await analyze(`I'm a noob programmer. Teach me how to become a 10x developer`)
 
   return entries
 }
