@@ -1,6 +1,7 @@
 import Editor from '@/app/components/Editor'
 import { getUserByClerkID } from '@/utils/auth'
 import { prisma } from '@/utils/db'
+import { Analysis } from '@prisma/client'
 
 const getEntry = async (id: string) => {
   const user = await getUserByClerkID()
@@ -12,12 +13,17 @@ const getEntry = async (id: string) => {
         id,
       },
     },
+    include: {
+      analysis: true,
+    },
   })
   return entry
 }
 
 const EntryPage = async ({ params }: any) => {
   const entry = await getEntry(params.id)
+  const { mood, subject, summary, negative, color } =
+    entry?.analysis as Analysis
   return (
     <div className="grid h-full w-full grid-cols-3">
       <div className="col-span-2">
@@ -30,19 +36,19 @@ const EntryPage = async ({ params }: any) => {
         <ul className="text-lg">
           <li className="flex items-center justify-between border-b px-2 py-4">
             <span className="font-semibold">Summary</span>
-            <span>Summary value</span>
+            <span>{summary}</span>
           </li>
           <li className="flex items-center justify-between border-b px-2 py-4">
             <span className="font-semibold">Subject</span>
-            <span>Subject value</span>
+            <span>{subject}</span>
           </li>
           <li className="flex items-center justify-between border-b px-2 py-4">
             <span className="font-semibold">Mood</span>
-            <span>Mood value</span>
+            <span>{mood}</span>
           </li>
           <li className="flex items-center justify-between border-b px-2 py-4">
             <span className="font-semibold">Negative</span>
-            <span>False</span>
+            <span>{negative ? 'True' : 'False'}</span>
           </li>
         </ul>
       </div>
