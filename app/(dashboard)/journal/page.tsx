@@ -16,14 +16,11 @@ const getEntries = async () => {
     },
   })
 
-  await analyze(`I'm a noob programmer. Teach me how to become a 10x developer`)
-
   return entries
 }
 
 const JournalPage = async () => {
   const entries = await getEntries()
-  console.log('entries', entries)
 
   return (
     <>

@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 export default function Home() {
   const { userId } = auth()
-  console.log('Auth:', auth())
 
   const href = userId ? '/journal' : '/new-user'
 
